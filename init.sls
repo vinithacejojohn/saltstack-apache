@@ -4,6 +4,7 @@ Apache Installation:
    - refresh:
  service.running:
    - name: httpd
+   - enable: True
 
 /etc/httpd/conf.d/myweb.com.conf:
    apache.configfile:
