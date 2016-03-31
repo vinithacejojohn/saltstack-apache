@@ -38,3 +38,4 @@ Adding the daily cron file to check apache updates:
   - user: root
   - group: root
   - create: True
+  - mode: 755
