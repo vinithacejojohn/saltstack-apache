@@ -16,3 +16,8 @@ salt "*" state.sls webdeployer
 ```
 
 The Apache server is configured with temp domain name "myweb.com". You need to add it to your /etc/hosts with the apache server IP to view the page in your browser.
+
+
+# Pillars
+In this version, going to use pilars. So adding a directory named "pillar" which contains the file "webvars.sls" where you can update the domain name that is requried. I am using "myweb.com".
+
