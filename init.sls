@@ -2,11 +2,6 @@ Apache Installation:
  pkg.installed:
    - name: httpd
    - refresh:
- service.running:
-   - name: httpd
-   - enable: True
-   - watch:
-         - file: /etc/httpd/conf.d/myweb.com.conf
 
 /etc/httpd/conf.d/myweb.com.conf:
    apache.configfile:
@@ -16,6 +11,11 @@ Apache Installation:
             ServerName:
               - myweb.com
             DocumentRoot: /var/www/html/myweb/
+
+Starting the apache service:
+   service.running:
+    - name: httpd
+    - enable: True
 
 Creating the DocumentRoot:
   file.directory:
