@@ -19,6 +19,8 @@ salt "*" state.sls webdeployer
 The Apache server is configured with temp domain name "myweb.com". You need to add it to your /etc/hosts with the apache server IP to view the page in your browser.
 
 
-# Pillars
+## Pillars
 In this version, going to use pilars. So adding a directory named "pillar" which contains the file "webvars.sls" where you can update the domain name that is requried. I am using "myweb.com".
 
+## Grains
+Adding a functionality to use grains. A pillar is created with the hostname of the web server using grains. This pillar will be used as the ServerName for the VirtualHost and the domainname "myweb.com" will be the ServerAlias. So you will be able to access the web page using both the hostname of server and "myweb.com" .

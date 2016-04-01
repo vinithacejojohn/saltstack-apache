@@ -9,7 +9,9 @@ Apache Installation:
         - VirtualHost:
             this: '*:80'
             ServerName:
-              -  {{ pillar['domainname'] }}
+              - {{ pillar['domainname'] }}
+            ServerAlias:
+              - {{ pillar['aliasname'] }}
             DocumentRoot: /var/www/html/myweb/
 
 Starting the apache service:
