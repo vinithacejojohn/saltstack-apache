@@ -9,7 +9,7 @@ Download this repo and copy "init.sls" and "files" to  "/srv/salt/webdeployer" w
 ```
 
 git clone https://github.com/vinithacejojohn/saltstack-apache.git
-mkdir /srv/salt/webdeployer
+mkdir -p /srv/salt/webdeployer
 cd saltstack-apache
 cp -rv init.sls files/ /srv/salt/webdeployer/
 salt "*" state.sls webdeployer
