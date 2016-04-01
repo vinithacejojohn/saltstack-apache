@@ -5,6 +5,8 @@ Apache Installation:
  service.running:
    - name: httpd
    - enable: True
+   - watch:
+         - file: /etc/httpd/conf.d/myweb.com.conf
 
 /etc/httpd/conf.d/myweb.com.conf:
    apache.configfile:
