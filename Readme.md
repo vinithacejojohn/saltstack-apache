@@ -14,3 +14,5 @@ cd saltstack-apache
 cp -rv init.sls files/ /srv/salt/webdeployer/
 salt "*" state.sls webdeployer
 ```
+
+The Apache server is configured with temp domain name "myweb.com". You need to add it to your /etc/hosts with the apache server IP to view the page in your browser.
