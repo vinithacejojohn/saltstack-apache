@@ -1,1 +1,2 @@
-domainname: myweb.com
+domainname: grains['fqdn'] 
+aliasname: myweb.com
