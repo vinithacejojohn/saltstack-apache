@@ -12,6 +12,7 @@ git clone https://github.com/vinithacejojohn/saltstack-apache.git
 mkdir -p /srv/salt/webdeployer
 cd saltstack-apache
 cp -rv init.sls files/ /srv/salt/webdeployer/
+cp -rv pillar /srv/
 salt "*" state.sls webdeployer
 ```
 
